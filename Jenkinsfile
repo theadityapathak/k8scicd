@@ -27,7 +27,6 @@ pipeline {
       steps{
         script {
           docker.withRegistry( registry , 'docker-private-credentials' ) {
-            dockerImage.push()
             sh "docker login -u ${USERNAME} -p ${PASSWORD}"
             dockerImage.push("${env.BUILD_NUMBER}")
           }
