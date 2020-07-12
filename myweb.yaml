@@ -36,3 +36,12 @@ spec:
   selector:
     app: myweb
   type: NodePort
+---
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: docker-secret
+data:
+  .dockerconfigjson: ewoJImF1dGhzIjogewoJCSIxOC4xNDQuODcuMTQyOjgxMjMiOiB7CgkJCSJhdXRoIjogIllXUnRhVzQ2Y1hkbGNqRXlNelE9IgoJCX0KCX0sCgkiSHR0cEhlYWRlcnMiOiB7CgkJIlVzZXItQWdlbnQiOiAiRG9ja2VyLUNsaWVudC8xOS4wMy42IChsaW51eCkiCgl9Cn0=
+type: kubernetes.io/dockerconfigjson
