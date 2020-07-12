@@ -27,7 +27,7 @@ pipeline {
       steps{
         script {
           docker.withRegistry('' , 'docker-private-credentials' ) {
-            sh "docker login 18.144.87.142:8123 -u ${USERNAME} -p ${PASSWORD}"
+            sh "docker login -u ${USERNAME} -p ${PASSWORD} 18.144.87.142:8123 "
             dockerImage.push("${env.BUILD_NUMBER}")
           }
         }
