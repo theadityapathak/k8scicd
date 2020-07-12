@@ -26,7 +26,7 @@ pipeline {
     stage('Push Image') {
       steps{
         script {
-          docker.withRegistry( "docker-private-credentials" ) {
+          docker.withRegistry( registry , docker-private-credentials ) {
             dockerImage.push()
           }
         }
