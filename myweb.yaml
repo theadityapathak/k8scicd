@@ -16,7 +16,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: 18.144.87.142:8123/nobody/web:1
+      - image: 18.144.87.142:8123/nobody/web:$BUILD_NUMBER
         imagePullPolicy: Always
         name: myweb
       imagePullSecrets:
